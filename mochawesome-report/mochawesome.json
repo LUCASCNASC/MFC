@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-09T23:33:15.745Z",
+    "end": "2024-09-09T23:33:41.492Z",
+    "duration": 25747,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e42d924-4263-4ac2-be15-d6d130a97fa7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.js",
+      "file": "cypress\\e2e\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a2a03b9b-d482-4390-8546-35066749b51c",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login caminho feliz, passar login e senha corretos",
+              "fullTitle": "Login Login caminho feliz, passar login e senha corretos",
+              "timedOut": null,
+              "duration": 25544,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.title().should('be.equal', 'MFC Store - A Loja Oficial do Maringá Futebol Clube'); //verifico se é exatamente aquele título\ncy.wait(8000);\n//Removendo mensagem \"Newsletter\"\ncy.get('[title=\"Close\"]').click();\ncy.wait(3000);\ncy.get('.acoes-conta > :nth-child(2)').should('contain', 'Minha Conta') //Validar \"Minha Conta\"\n.click(); //Clicar em \"Minha Conta\"\n// ENTRANDO NA TELA DE LOGIN\ncy.wait(2000);\ncy.get('.form-horizontal > fieldset > .titulo').should('contain', 'Já sou cadastrado'); //Validando texto \"Já sou cadastrado\"\ncy.get('fieldset > :nth-child(2) > .control-label').should('contain', 'E-mail:'); //Validando texto \"E-mail:\"\ncy.get(':nth-child(3) > .control-label').should('contain', 'Senha:'); //Validando texto \"Senha:\"\ncy.get('.recuperar-senha').should('contain', 'Esqueceu a senha ou precisa criar?'); //Validando texto \"Esqueceu a senha ou precisa criar?\"  \ncy.wait(2000);\ncy.get('.controls > #id_email').type('camargolucasnasc@gmail.com'); //Passando email para logar\ncy.wait(2000);\ncy.get('#id_senha').type('@Lcn1998'); //Passando senha para logar\ncy.wait(2000);\ncy.get('.controls > .botao').should('contain', 'Prosseguir') //Validando texto dentro do botão \"Prosseguir\"\n.click(); //Clicando no botão \"Prosseguir\"",
+              "err": {},
+              "uuid": "f01803c6-5a9d-4f9a-805e-6c4ac35f6eb8",
+              "parentUUID": "a2a03b9b-d482-4390-8546-35066749b51c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f01803c6-5a9d-4f9a-805e-6c4ac35f6eb8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25544,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
