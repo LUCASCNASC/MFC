@@ -4,7 +4,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: "8f9zc9",
+  projectId: 'bpvo3v',
   e2e: {
    baseUrl: 'https://store.maringafc.com/',
     

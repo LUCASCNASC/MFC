@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-09-09T23:33:15.745Z",
-    "end": "2024-09-09T23:33:41.492Z",
-    "duration": 25747,
+    "start": "2024-10-23T23:12:04.304Z",
+    "end": "2024-10-23T23:12:29.226Z",
+    "duration": 24922,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8e42d924-4263-4ac2-be15-d6d130a97fa7",
+      "uuid": "8aaca4fe-26be-4b37-a2aa-6d002d8f7c3a",
       "title": "",
       "fullFile": "cypress\\e2e\\Login.cy.js",
       "file": "cypress\\e2e\\Login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a2a03b9b-d482-4390-8546-35066749b51c",
+          "uuid": "3ccc6320-f73d-487d-9f03-405590c85db9",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login caminho feliz, passar login e senha corretos",
               "fullTitle": "Login Login caminho feliz, passar login e senha corretos",
               "timedOut": null,
-              "duration": 25544,
+              "duration": 24673,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('/');\ncy.title().should('be.equal', 'MFC Store - A Loja Oficial do Maringá Futebol Clube'); //verifico se é exatamente aquele título\ncy.wait(8000);\n//Removendo mensagem \"Newsletter\"\ncy.get('[title=\"Close\"]').click();\ncy.wait(3000);\ncy.get('.acoes-conta > :nth-child(2)').should('contain', 'Minha Conta') //Validar \"Minha Conta\"\n.click(); //Clicar em \"Minha Conta\"\n// ENTRANDO NA TELA DE LOGIN\ncy.wait(2000);\ncy.get('.form-horizontal > fieldset > .titulo').should('contain', 'Já sou cadastrado'); //Validando texto \"Já sou cadastrado\"\ncy.get('fieldset > :nth-child(2) > .control-label').should('contain', 'E-mail:'); //Validando texto \"E-mail:\"\ncy.get(':nth-child(3) > .control-label').should('contain', 'Senha:'); //Validando texto \"Senha:\"\ncy.get('.recuperar-senha').should('contain', 'Esqueceu a senha ou precisa criar?'); //Validando texto \"Esqueceu a senha ou precisa criar?\"  \ncy.wait(2000);\ncy.get('.controls > #id_email').type('camargolucasnasc@gmail.com'); //Passando email para logar\ncy.wait(2000);\ncy.get('#id_senha').type('@Lcn1998'); //Passando senha para logar\ncy.wait(2000);\ncy.get('.controls > .botao').should('contain', 'Prosseguir') //Validando texto dentro do botão \"Prosseguir\"\n.click(); //Clicando no botão \"Prosseguir\"",
               "err": {},
-              "uuid": "f01803c6-5a9d-4f9a-805e-6c4ac35f6eb8",
-              "parentUUID": "a2a03b9b-d482-4390-8546-35066749b51c",
+              "uuid": "4054e59c-45de-4afe-9be4-10a1d80ca243",
+              "parentUUID": "3ccc6320-f73d-487d-9f03-405590c85db9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f01803c6-5a9d-4f9a-805e-6c4ac35f6eb8"
+            "4054e59c-45de-4afe-9be4-10a1d80ca243"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 25544,
+          "duration": 24673,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
