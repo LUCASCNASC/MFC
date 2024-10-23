@@ -1,6 +1,6 @@
 describe('Cadastro', () => {
 
-  
+  //test
     it('Cadastro, Caminho feliz', () => {
         cy.visit('/');
 
